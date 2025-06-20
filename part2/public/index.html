@@ -44,10 +44,11 @@
         <td>{{ dog.name }}</td>
         <td>{{ dog.size }}</td>
         <td>{{ dog.owner_id }}</td>
-        <td></td>
+        <td><img :src="dog.image" alt="Dog photo" class="img-thumbnail" style="max-height: 100px;" /></td>
       </tr>
     </tbody>
   </table>
+
   <script>
     const { createApp } = Vue;
     createApp({
