@@ -23,7 +23,7 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Dog</label>
-            <select v
+            <select v-model="form.dog_id" class
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
