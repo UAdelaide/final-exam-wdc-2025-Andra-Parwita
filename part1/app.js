@@ -104,7 +104,9 @@ let db;
 //apis
 app.get('api/dogs', async (req,res) =>{
   try {
-    const [rows] = await creatl.query
+    const [rows] = await pool.query(`
+
+    `)
   }
 });
 
