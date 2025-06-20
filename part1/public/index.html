@@ -82,18 +82,13 @@
                     sound.play();
                 };
 
-                const spin = () => {
-
-                };
-
                 onMounted(() => {
                     fetchDogImage();
                 });
 
                 return {
                     dogImage,
-                    playBarkSound,
-                    spin
+                    playBarkSound
                 };
             }
         }).mount('#app');
