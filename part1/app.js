@@ -101,7 +101,7 @@ let db;
 })();
 
 //apis
-
+app.get('api')
 
 app.use(express.static(path.join(__dirname, 'public')));
 
