@@ -11,7 +11,7 @@
         <h1>DOG WALKING SERVICES?!!?!</h1>
         <div class="dog-card">
             <h2>DOG OF THE DAY!!</h2>
-            <img class="dog-image" src="https://dog.ceo/api/breeds/image/random" alt="dog" @mouseover="playBarkSound">
+            <img class="dog-image" src="dogImage" alt="dog" @mouseover="playBarkSound">
         </div>
         <div class="navigation">
             <button type="button" @click="spin"></button>
@@ -27,6 +27,7 @@
             setup() {
                 const dogImage = ref('');
                 const isSpinning = ref(true);
+
             }
         }
     </script>
