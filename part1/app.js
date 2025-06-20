@@ -144,7 +144,8 @@ try {
       SELECT u.username AS walker_username,
       COUNT(wr.rating) AS total_ratings,
       AVG(wr.rating) AS average_rating,
-      COUNT(DISTINCT CASE WHEN w.status = 'completed' THEN w.request_id END) 
+      COUNT(DISTINCT CASE WHEN w.status = 'completed' THEN w.request_id END) AS completed_walks
+      FROM Users u
 
     `);
     res.json(rows);
