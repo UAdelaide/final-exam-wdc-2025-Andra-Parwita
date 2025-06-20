@@ -110,7 +110,8 @@ app.get('api/dogs', async (req,res) =>{
       JOIN Users u ON d.owner_id = u.user_id
     `);
   } catch (err) {
-    console
+    console.error(err);
+    res.status(500).json()
   }
 });
 
