@@ -48,7 +48,7 @@
         <h1>DOG WALKING SERVICES?!!?!</h1>
         <div class="dog-card">
             <h2>DOG OF THE DAY!!</h2>
-            <img class="dog-image" v-bind:src="dogImage" alt="dog" @mouseover="playBarkSound">
+            <img class="dog-image" v-bind:src="dogImage" alt="dog">
         </div>
         <div class="navigation">
             <button type="button" @click="ChangeBackground">Bark!</button>
@@ -76,9 +76,7 @@
                 };
 
                 const ChangeBackground = () => {
-                    const sound = document.getElementById('barkSound');
-                    sound.currentTime = 0;
-                    sound.play();
+                    
                 };
 
                 onMounted(() => {
