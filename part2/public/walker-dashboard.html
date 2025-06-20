@@ -48,7 +48,7 @@
         const error = ref('');
 
         async function getCurrentUser() {
-          const res = await
+          const res = await fetch('api/users/me', { credentials: 'include' })
         }
 
         async function loadWalkRequests() {
