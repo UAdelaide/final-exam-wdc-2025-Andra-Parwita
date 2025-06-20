@@ -136,6 +136,8 @@
           }
         }
 
+        
+
         onMounted( async () => {
           try {
             const res = await fetch('/api/users/me', { credentials: 'include' });
@@ -143,7 +145,7 @@
             await loadDogs;
             await loadWalks;
           } catch {
-            window.loaction
+            window.loaction.href = 'index.html';
           }
         });
 
