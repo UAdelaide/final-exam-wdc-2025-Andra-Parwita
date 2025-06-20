@@ -90,15 +90,15 @@
         }
       },
 
-        async fetchRandomImage() {
-          try {
-            const res = await fetch('https://dog.ceo/api/breeds/image/random');
-            const data = await res.json();
-            return data.message;
-          } catch {
-            return 'https://images.dog.ceo/breeds/retriever-golden/n02099601_100.jpg';
-          }
-        },
+      async fetchRandomImage() {
+        try {
+          const res = await fetch('https://dog.ceo/api/breeds/image/random');
+          const data = await res.json();
+          return data.message;
+        } catch {
+          return 'https://images.dog.ceo/breeds/retriever-golden/n02099601_100.jpg';
+        }
+      },
 
         async loadDogs() {
           try {
