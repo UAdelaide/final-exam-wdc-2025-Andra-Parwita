@@ -128,8 +128,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
     `);
     res.json(rows);
-  } ca
-
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to walker summary' });
+  }
 });
 
 app.get('/api/walkers/summary', async (req, res) => {
