@@ -100,27 +100,26 @@
         }
       },
 
-        async loadDogs() {
-          try {
-            const res = await fetch('/api/users/dogs');
-            if (!res.ok) throw new Error('Failed to load dog data');
+      async loadDogs() {
+        try {
+          const res = await fetch('/api/users/dogs');
+          if (!res.ok) throw new Error('Failed to load dog data');
 
-            const dogData = await res.json();
-            const withImages = await Promise.all(
-              dogData.map(async (dog) => {
-                const image = await this.fetchRandomImage();
-                return { ...dog, image };
-              })
-            );
+          const dogData = await res.json();
+          const withImages = await Promise.all(
+            dogData.map(async (dog) => {
+              const image = await this.fetchRandomImage();
+              return { ...dog, image };
+            })
+          );
 
-            this.dogs = withImages;
-          } catch (err) {
-            console.error('Error loading dogs:', err);
-          }
-        },
-        mounted() {
-          this.loadDogs();
+          this.dogs = withImages;
+        } catch (err) {
+          console.error('Error loading dogs:', err);
         }
+      },
+      mounted() {
+        this.loadDogs();
       }
     }).mount('#app');
   </script>
