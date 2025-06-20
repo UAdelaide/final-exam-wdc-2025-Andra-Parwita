@@ -13,8 +13,8 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <form @submit.prevent="login">
       <div class="mb-3">
-        <label for="username" class="form-label">Email</label>
-        <input>
+        <label for="username" class="form-label">Username:</label>
+        <input v-model="">
       </div>
 
       <div>
