@@ -89,7 +89,7 @@
           this.errorMessage = 'An Error Occurred';
         },
 
-        async fetch
+        async fetchRandomImage() {
           try {
             const res = await fetch('https://dog.ceo/api/breeds/image/random');
             const data = await res.json();
