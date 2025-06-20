@@ -23,7 +23,11 @@
     <script>
         const { createApp, ref, onMounted } = Vue;
 
-        createApp({}
+        createApp({
+            setup() {
+                const dogImage = ref('')
+            }
+        }
     </script>
 </body>
 </html>
