@@ -150,7 +150,7 @@ try {
       LEFT JOIN WalkRequest w ON wa.request_id = w.request_id
       LEFT JOIN WalkRatings wr ON w.request_id = wa.request_id
       WHERE u.role = 'walker'
-
+      GROUP BY u.user_id
     `);
     res.json(rows);
   } catch (err) {
