@@ -51,9 +51,9 @@
             <img class="dog-image" v-bind:src="dogImage" alt="dog" @mouseover="playBarkSound">
         </div>
         <div class="navigation">
-            <button type="button" @click="spin">Spin!</button>
-            <button type="button" @click="spin">Spin?</button>
-            <button type="button" @click="spin">Spin!?</button>
+            <button type="button" @click="playBarkSound">Spin!</button>
+            <button type="button" @click="playBarkSound">Spin?</button>
+            <button type="button" @click="playBarkSound">Spin!?</button>
             <button type="button" @click="spin">Spin?!</button>
         </div>
         <audio id="barkSound" src="https://www.soundjay.com/misc/sounds/dog-bark-1.mp3" preload="auto"></audio>
