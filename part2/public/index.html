@@ -59,9 +59,9 @@
           } else if (role == 'walker'){
             window.location.href = 'walker-dashboard.html'
           } else {
-            un
+            this.errorMessage = 'Unknown role';
           }
-        }
+        } catch (err)
       }
     }
     }).mount('#app');
