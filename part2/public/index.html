@@ -116,8 +116,6 @@
             this.dogs = withImages;
           } catch (err) {
             console.error('Error loading dogs:', err);
-          } finally {
-            this.loadingDogs = false;
           }
         },
         mounted() {
