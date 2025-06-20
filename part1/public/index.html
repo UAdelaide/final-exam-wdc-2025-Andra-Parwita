@@ -96,6 +96,11 @@
                     document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
                 };
 
+                const changeTextColour = () => {
+                    const colors = ['#FF00FF', '#00FFFF', '#FFFF00', '#FF0000', '#00FF00', '#0000FF'];
+                    document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                };
+
                 onMounted(() => {
                     fetchDogImage();
                 });
