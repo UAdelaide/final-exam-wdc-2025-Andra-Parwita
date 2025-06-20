@@ -70,7 +70,7 @@ let db;
           FOREIGN KEY (dog_id) REFERENCES Dogs(dog_id)
       );
 
-      CREATE TABLE WalkApplications (
+      CREATE TABLE IF NOT EXISTS WalkApplications (
           application_id INT AUTO_INCREMENT PRIMARY KEY,
           request_id INT NOT NULL,
           walker_id INT NOT NULL,
@@ -81,7 +81,7 @@ let db;
           CONSTRAINT unique_application UNIQUE (request_id, walker_id)
       );
 
-      CREATE TABLE WalkRatings (
+      CREATE TABLE IF NOT EXISTS WalkRatings (
           rating_id INT AUTO_INCREMENT PRIMARY KEY,
           request_id INT NOT NULL,
           walker_id INT NOT NULL,
