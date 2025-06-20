@@ -47,6 +47,10 @@
         const message = ref('');
         const error = ref('');
 
+        async function(params) => {
+
+        }
+
         async function loadWalkRequests() {
           try {
             const res = await fetch('/api/walks');
@@ -88,8 +92,6 @@
             alert('Error logout' + err.message);
           }
         }
-
-        
 
         onMounted(() => {
           loadWalkRequests();
