@@ -37,7 +37,13 @@
           errorMessage: ''
         };
       },
-    methods: 
+    methods: {
+      async login() {
+        try {
+          const res = await fetch('/users')
+        }
+      }
+    }
     }).mount('#app');
   </script>
 
