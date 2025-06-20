@@ -5,7 +5,6 @@ require('dotenv').config();
 const app = express();
 
 //sessions
-const session = require('express-session');
 
 app.use(session({
     secret: 'your-secret-key',
