@@ -138,7 +138,7 @@
 
         onMounted( async () => {
           try {
-            const rest = await fetch('/api')
+            const rest = await fetch('/api/users/me', {credentials:'include' })
           }
         });
 
