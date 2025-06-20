@@ -53,8 +53,8 @@
         <div class="navigation">
             <button type="button" @click="ChangeBackground">Bark!</button>
             <button type="button" @click="ChangeBackground">Bark?</button>
-            <button type="button" @click="C">Bark!?</button>
-            <button type="button" @click="playBarkSound">Bark?!</button>
+            <button type="button" @click="ChangeBackground">Bark!?</button>
+            <button type="button" @click="ChangeBackground">Bark?!</button>
         </div>
     </div>
     <script>
@@ -75,7 +75,7 @@
                     }
                 };
 
-                const playBarkSound = () => {
+                const ChangeBackground = () => {
                     const sound = document.getElementById('barkSound');
                     sound.currentTime = 0;
                     sound.play();
