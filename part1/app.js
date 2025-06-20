@@ -49,6 +49,7 @@ let db;
           password_hash VARCHAR(255) NOT NULL,
           role ENUM('owner', 'walker') NOT NULL,
           created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
       `);
 
     await db.execute(`
@@ -58,6 +59,7 @@ let db;
           name VARCHAR(50) NOT NULL,
           size ENUM('small', 'medium', 'large') NOT NULL,
           FOREIGN KEY (owner_id) REFERENCES Users(user_id)
+        
       `);
 
     await db.execute(`
