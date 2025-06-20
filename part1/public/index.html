@@ -76,6 +76,7 @@
                     sound.currentTime = 0;
                     sound.play();
                 };
+                
 
                 onMounted(() => {
                     fetchDogImage();
@@ -83,7 +84,8 @@
 
                 return {
                     dogImage,
-                    playBarkSound
+                    playBarkSound,
+                    spin
                 };
             }
         }).mount('#app');
