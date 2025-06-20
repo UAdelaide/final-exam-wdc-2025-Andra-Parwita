@@ -152,8 +152,8 @@
           try {
             const res = await fetch('/api/users/me', { credentials: 'include' });
             if (!res.ok) {throw new Error('Not Logged in');}
-            await loadDogs;
-            await loadWalks;
+            await loadDogs();
+            await loadWalks();
           } catch {
             window.loaction.href = 'index.html';
           }
