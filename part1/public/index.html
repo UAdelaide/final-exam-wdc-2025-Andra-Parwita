@@ -67,8 +67,9 @@
 
                 const playBarkSound = () => {
                     const sound = document.getElementById('barkSound');
-                    sound.currentTime
-                }
+                    sound.currentTime = 0;
+                    sound.play();
+                };
 
                 return {
                     dogImage
