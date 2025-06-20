@@ -115,7 +115,7 @@ app.get('/api/dogs', async (req,res) => {
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
     `);
-    res
+    res.json(rows);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to fetch dogs' });
