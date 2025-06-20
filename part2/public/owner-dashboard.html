@@ -125,9 +125,8 @@
             if (!res.ok) {throw new Error('Logout Failed');}
             window.location.href = 'index.html';
           } catch (err) {
-            alert('Error during logout' + err.message);
+            alert('Error logout' + err.message);
           }
-
         }
 
         onMounted(() => {
@@ -139,7 +138,8 @@
           walks,
           message,
           error,
-          submitWalkRequest
+          submitWalkRequest,
+          logout
         };
       }
     }).mount('#app');
