@@ -89,9 +89,39 @@
           this.errorMessage = 'An Error Occurred';
         }
       },
-      
-    }
 
+        async fetchRandomImage() {
+          try {
+            const res = await fetch('https://dog.ceo/api/breeds/image/random');
+            const data = await res.json();
+            return data.message;
+          } catch {
+            return 'https://images.dog.ceo/breeds/retriever-golden/n02099601_100.jpg';
+          }
+        },
+
+        async loadDogs() {
+          try {
+            const res = await fetch('/api/users/dogs');
+            if (!res.ok) throw new Error('Failed to load dog data');
+
+            const dogData = await res.json();
+            const withImages = await Promise.all(
+              dogData.map(async (dog) => {
+                const image = await this.fetchRandomImage();
+                return { ...dog, image };
+              })
+            );
+
+            this.dogs = withImages;
+          } catch (err) {
+            console.error('Error loading dogs:', err);
+          } finally {
+            this.loadingDogs = false;
+          }
+        }
+      },
+    }
     }).mount('#app');
   </script>
 
