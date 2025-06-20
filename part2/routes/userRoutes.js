@@ -78,7 +78,7 @@ router.get('/my-dogs', async (req, res) => {
 
   try {
     const [rows] = await db.query(
-      S
+      'SELECT dog_id, name FROM Dogs WHERE ow'
     )
   }
 });
