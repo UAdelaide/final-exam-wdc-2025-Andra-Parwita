@@ -146,7 +146,9 @@ try {
       AVG(wr.rating) AS average_rating,
       COUNT(DISTINCT CASE WHEN w.status = 'completed' THEN w.request_id END) AS completed_walks
       FROM Users u
-      LEFT JOIN WalkApplications wa ON u.user_id = wa.walker
+      LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id
+      LEFT JOIN 
+      LEFT JOIN WalkRatings wr
 
     `);
     res.json(rows);
