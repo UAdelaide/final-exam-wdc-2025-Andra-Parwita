@@ -119,6 +119,9 @@
           } finally {
             this.loadingDogs = false;
           }
+        },
+        mounted() {
+          this.loadDogs();
         }
       }
     }).mount('#app');
