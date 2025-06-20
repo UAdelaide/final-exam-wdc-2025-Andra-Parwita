@@ -100,6 +100,7 @@
                 const changeTextColour = () => {
                     const colors = ['#FF00FF', '#00FFFF', '#FFFF00', '#FF0000', '#00FF00', '#0000FF'];
                     document.body.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    document.button.style.color = colors[Math.floor(Math.random() * colors.length)];
                 };
 
                 onMounted(() => {
