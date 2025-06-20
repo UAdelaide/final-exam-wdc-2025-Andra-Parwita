@@ -17,13 +17,13 @@ app.use('/api/users', userRoutes);
 
 // Export the app instead of listening here
 
+//sessions
 const session = require('express-session');
 
 app.use(session({
     secret: 'your-secret-key',
     resave: false,
-    saveUninitialized
-}
+    saveUninitialized: false
+}));
 
-))
 module.exports = app;
