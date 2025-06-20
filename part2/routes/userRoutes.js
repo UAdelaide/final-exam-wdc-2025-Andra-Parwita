@@ -70,6 +70,6 @@ router.post('/logout', (req, res) => {
 });
 
 router.get('/my-dogs', async (req, res) => {
-  if (!req.session.user)
+  if (!req.session.user){ return res.status(401).json()}
 })
 module.exports = router;
