@@ -49,6 +49,10 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg);}
         }
+
+        .hidden {
+            
+        }
     </style>
 </head>
 
@@ -73,7 +77,7 @@
             HELLO! This is an awesome page right here? HELLO! This is an awesome page right here?
             HELLO! This is an awesome page right here? HELLO! This is an awesome page right here? HELLO! This is an awesome page right here?
         </pre>
-        <p hidden> Be careful!</p>
+        <p class="hidden"> Be careful!</p>
         <div>
             <br> <br>
             <button type="button" @click="changeTextColour" @mouseover="ChangeBackground">This changes colour but be careful</button>
