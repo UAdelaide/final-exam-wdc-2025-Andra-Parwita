@@ -110,7 +110,7 @@ let db;
 //apis
 app.get('/api/dogs', async (req, res) => {
   try {
-    const [rows] = await pool.query(`
+    const [rows] = await db.query(`
       SELECT d.name AS dog_name, d.size, u.username AS owner_username
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
@@ -124,7 +124,7 @@ app.get('/api/dogs', async (req, res) => {
 
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [rows] = await pool.query(`
+    const [rows] = await db.query(`
 
     `);
     res.json(rows);
@@ -136,7 +136,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('/api/walkers/summary', async (req, res) => {
 try {
-    const [rows] = await pool.query(`
+    const [rows] = await db.query(`
 
     `);
     res.json(rows);
