@@ -135,7 +135,15 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 app.get('/api/walkers/summary', async (req, res) => {
+try {
+    const [rows] = await pool.query(`
 
+    `);
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to walker summary' });
+  }
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
