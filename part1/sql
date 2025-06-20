@@ -11,3 +11,4 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 ((SELECT user_id FROM Users WHERE username = 'exam'), 'examDog', 'large'),
 ((SELECT user_id FROM Users WHERE username = 'exam'), 'examusDoggus', 'small'),
 ((SELECT user_id FROM Users WHERE username = 'alice123'), 'greg', 'medium');
+
