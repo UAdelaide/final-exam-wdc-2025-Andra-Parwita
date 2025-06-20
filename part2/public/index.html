@@ -117,12 +117,11 @@
         } catch (err) {
           console.error('Error loading dogs:', err);
         }
-      },
+      }
+    },
+    mounted() {
+      this.loadDogs();
     }
-      mounted() {
-        this.loadDogs();
-      },
-
     }).mount('#app');
   </script>
 
