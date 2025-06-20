@@ -134,7 +134,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
     res.json(rows);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Failed to walker summary' });
+    res.status(500).json({ error: 'Failed to get walker summary' });
   }
 });
 
@@ -155,7 +155,7 @@ try {
     res.json(rows);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Failed to walker summary' });
+    res.status(500).json({ error: 'Failed to get walker summary' });
   }
 });
 
