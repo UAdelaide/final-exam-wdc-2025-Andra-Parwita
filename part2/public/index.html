@@ -61,7 +61,9 @@
           } else {
             this.errorMessage = 'Unknown role';
           }
-        } catch (err)
+        } catch (err){
+          this.errorMessage = 'An Error Occurred';
+        }
       }
     }
     }).mount('#app');
