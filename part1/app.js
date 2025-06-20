@@ -126,9 +126,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
   try {
     const [rows] = await pool.query(`
 
-      `)
-  }
-  res.json(rows);
+    `);
+    res.json(rows);
+  } ca
+
 });
 
 app.get('/api/walkers/summary', async (req, res) => {
