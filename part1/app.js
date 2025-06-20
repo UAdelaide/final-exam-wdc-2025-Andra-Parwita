@@ -105,7 +105,8 @@ let db;
 app.get('api/dogs', async (req,res) =>{
   try {
     const [rows] = await pool.query(`
-      SELECT d.name AS dog_name
+      SELECT d.name AS dog_name, d.size, u.username AS owner_username
+      FROM 
     `);
   }
 });
