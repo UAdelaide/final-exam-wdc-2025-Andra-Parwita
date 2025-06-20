@@ -107,7 +107,7 @@ let db;
   }
 })();
 
-//apis
+// apis
 app.get('/api/dogs', async (req, res) => {
   try {
     const [rows] = await db.query(`
