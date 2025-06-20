@@ -149,7 +149,7 @@ try {
       LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id
       LEFT JOIN WalkRequest w ON wa.request_id = w.request_id
       LEFT JOIN WalkRatings wr ON w.request_id = wa.request_id
-      
+      WHERE u.role = 'walker'
 
     `);
     res.json(rows);
