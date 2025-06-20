@@ -50,7 +50,7 @@
         async function getCurrentUser() {
           const res = await fetch('api/users/me', { credentials: 'include' });
           if (!res.ok) {throw new Error('Not logged in');}
-          return awai
+          return await res.json();
         }
 
         async function loadWalkRequests() {
