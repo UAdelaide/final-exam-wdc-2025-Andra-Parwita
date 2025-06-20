@@ -51,10 +51,10 @@
             <img class="dog-image" v-bind:src="dogImage" alt="dog" @mouseover="ChangeBackground">
         </div>
         <div class="navigation">
-            <button type="button" @click="ChangeTextColour">Bark!</button>
-            <button type="button" @click="ChangeTextColour">Bark?</button>
-            <button type="button" @click="ChangeTextColour">Bark!?</button>
-            <button type="button" @click="ChangeTextColour">Bark?!</button>
+            <button type="button" @click="ChangeBackground">Bark!</button>
+            <button type="button" @click="ChangeBackground">Bark?</button>
+            <button type="button" @click="ChangeBackground">Bark!?</button>
+            <button type="button" @click="ChangeBackground">Bark?!</button>
         </div>
     </div>
     <script>
@@ -80,11 +80,6 @@
                     document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
                 };
 
-                const ChangeTextColor = () => {
-                    const colors = ['#00FFFF', '#FF00FF', '#FFFF00', '#00FF00', '#FF0000', '#0000FF'];
-                    document.body.style.color = colors[Math.floor(Math.random() * colors.length)];
-                };
-
                 onMounted(() => {
                     fetchDogImage();
                 });
@@ -92,7 +87,7 @@
                 return {
                     dogImage,
                     ChangeBackground,
-                    ChangeTextColour
+                    ChangeTextColour,
                 };
             }
         }).mount('#app');
