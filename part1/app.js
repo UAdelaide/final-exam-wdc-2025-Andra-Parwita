@@ -105,7 +105,7 @@ let db;
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
-});
+})();
 
 //apis
 app.get('/api/dogs', async (req, res) => {
@@ -121,6 +121,8 @@ app.get('/api/dogs', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
+
+app.get('/api/dogs', async (req, res) => {});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
