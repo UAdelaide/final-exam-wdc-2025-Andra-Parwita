@@ -52,6 +52,9 @@
             this.errorMessage = data.error || 'Login Failed';
             return;
           }
+
+          const role = data.user.role;
+          if (role == 'owner' )
         }
       }
     }
