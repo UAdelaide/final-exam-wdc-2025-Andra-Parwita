@@ -98,7 +98,7 @@
 
                 const changeTextColour = () => {
                     const colors = ['#FF00FF', '#00FFFF', '#FFFF00', '#FF0000', '#00FF00', '#0000FF'];
-                    document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    document.body.style.color = colors[Math.floor(Math.random() * colors.length)];
                 };
 
                 onMounted(() => {
@@ -108,6 +108,7 @@
                 return {
                     dogImage,
                     ChangeBackground,
+                    changeTextColour,
                 };
             }
         }).mount('#app');
