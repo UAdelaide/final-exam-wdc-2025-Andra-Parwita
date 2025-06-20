@@ -88,6 +88,14 @@
         } catch (err){
           this.errorMessage = 'An Error Occurred';
         }
+          try {
+            const res = await fetch('https://dog.ceo/api/breeds/image/random');
+            const data = await res.json();
+            return data.message;
+          } catch {
+            return 'https://via.placeholder.com/100?text=Dog'; // fallback
+          }
+        },
       }
     }
     }).mount('#app');
