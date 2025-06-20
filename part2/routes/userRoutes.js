@@ -82,7 +82,7 @@ router.get('/my-dogs', async (req, res) => {
     );
     res.json(rows);
   } catch (err) {
-    res.status(500).json({error: 'Could not fetch '});
+    res.status(500).json({ error: 'Could not fetch dogs' });
   }
 });
 
