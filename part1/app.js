@@ -122,9 +122,13 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
-app.get('/api/walkrequests/open', async (req, res) => {});
+app.get('/api/walkrequests/open', async (req, res) => {
+  
+});
 
-app.get('/api/walkers/summary', async);
+app.get('/api/walkers/summary', async (req, res) => {
+
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
